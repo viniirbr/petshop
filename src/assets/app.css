@@ -1,0 +1,32 @@
+:root {
+    --primary-color: #A45C40;
+    --second-color: #F6EEE0;
+    --accent-color: #E4B7A0;
+}
+
+.button {
+    background: var(--primary-color);
+    border-radius: 10px;
+    color: var(--second-color);
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    transition: all .5s;
+    width: 115px;
+}
+
+.button:hover {
+    background: var(--accent-color);
+}
+
+.input {
+    border-radius: 10px;
+    border: var(--primary-color) 2px dashed;
+    height: 40px;
+    text-align: center;
+    width: 100%;
+}
+
+.input:focus {
+    border: var(--primary-color) 2px solid;
+}

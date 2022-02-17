@@ -1,14 +1,17 @@
-import logo from './logo.svg';
+import { Component } from 'react';
 import './App.css';
+import Header from './components/Header/Header';
+import ScheduleForm from './components/ScheduleForm/ScheduleForm';
+import "./assets/app.css"
 
-function App() {
-  return (
-    <form>
-      <label>Cliente</label>
-      <input placeholder='Nome do cliente'></input>
-      
-    </form>
-  );
+class App extends Component {
+  render() {
+    return (
+      <>
+        <Header />
+        <ScheduleForm />
+      </>
+    );
+  }
 }
-
 export default App;
