@@ -7,9 +7,38 @@
     width: 230px;
     height: 340px;
     border-radius: 10px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .card__image {
-    width: 90px;
+    width: 120px;
+}
+
+.card__pet-name {
+    font-family: 'Pacifico', cursive;
+    color: var(--light-color);
+}
+
+.card__human-name {
+    font-family: 'Dancing', cursive;
+    color: var(--accent-color);
+}
+
+.card__schedule-date {
+    font-family: 'Dancing', cursive;
+    color: var(--accent-color);
+}
+
+.card__done {
+    cursor: pointer;
+}
+
+.card__container-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 220px;
+    background: var(--light-color);
+    border-radius: 10px;
 }

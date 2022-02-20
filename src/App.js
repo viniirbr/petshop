@@ -1,6 +1,7 @@
 import { Component } from 'react';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
+import './index.css';
 import "./assets/app.css"
 import Header from './components/Header/Header';
 import SchedulePage from './pages/SchedulePage/SchedulePage';
@@ -38,7 +39,7 @@ class App extends Component {
   render() {
     return (
         <Router>
-          <Header />
+          <Header servicesCount={this.state.scheduledServices.length}/>
           <Switch>
             <Route exact path="/">
               <SchedulePage addScheduledServiceFunction = {this.addScheduledService.bind(this)}/>

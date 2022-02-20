@@ -69,7 +69,7 @@ class ScheduleForm extends Component {
 
     render() {
         return (
-            <form className='schedule-form' onSubmit={this.addService.bind(this)}> 
+            <form className='schedule-form' onSubmit={this.addService.bind(this)}>
                 <div className='schedule-form__container'>
                     <label className='schedule-form__label'>Pet name</label>
                     <input
@@ -82,27 +82,28 @@ class ScheduleForm extends Component {
 
                 <div className='schedule-form__container'>
                     <label className='schedule-form__label'>His/Her human</label>
-                    <input 
-                    type='text' 
-                    placeholder='Human responsible for the pet...' 
-                    className='input'
-                    value={this.humanName}
-                    onChange={this.changeHumanName.bind(this)} />
+                    <input
+                        type='text'
+                        placeholder='Human responsible for the pet...'
+                        className='input'
+                        value={this.humanName}
+                        onChange={this.changeHumanName.bind(this)} />
                 </div>
+                <section className='service-date'>
+                    <div className='schedule-form__container'>
+                        <label className='schedule-form__label'>Select service</label>
+                        <select className='input' value={this.service} onChange={this.changeService.bind(this)}>
+                            <option value="Shower">Shower</option>
+                            <option value="Groom">Groom</option>
+                            <option value="Shower+Groom">Shower+Groom</option>
+                        </select>
+                    </div>
 
-                <div className='schedule-form__container'>
-                    <label className='schedule-form__label'>Select service</label>
-                    <select value={this.service} onChange={this.changeService.bind(this)}>
-                        <option value="Shower">Shower</option>
-                        <option value="Groom">Groom</option>
-                        <option value="Shower+Groom">Shower+Groom</option>
-                    </select>
-                </div>
-
-                <div className='schedule-form__container'>
-                    <label className='schedule-form__label'>Choose a date</label>
-                    <input type="date" value={this.scheduleDate} onChange={this.changeDate.bind(this)}/>
-                </div>
+                    <div className='schedule-form__container'>
+                        <label className='schedule-form__label'>Choose a date</label>
+                        <input className='input' type="date" value={this.scheduleDate} onChange={this.changeDate.bind(this)} />
+                    </div>
+                </section>
 
                 <button className='button' type='submit'>Confirm</button>
             </form>

@@ -12,9 +12,18 @@
     flex-direction: column;
     align-items: center;
     gap: 5px;
+    width: 30%;
 }
 
 .schedule-form__label {
     font-size: 2rem;
     color: var(--primary-color);
+    font-family: 'Pacifico', 'cursive';
+    line-height: 30px;
+}
+
+.service-date {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;    
 }

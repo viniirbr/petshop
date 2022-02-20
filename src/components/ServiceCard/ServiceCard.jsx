@@ -3,7 +3,9 @@ import groomed from '../../assets/images/groomed.png'
 import showered from '../../assets/images/showered.png'
 import showeredGroomed from '../../assets/images/showered+groomed.png'
 import './service-card.css'
-import {ReactComponent as Done} from '../../assets/images/done.svg'
+import { ReactComponent as Done } from '../../assets/images/done.svg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 class ServiceCard extends Component {
 
@@ -15,7 +17,7 @@ class ServiceCard extends Component {
 
 
 
-    render() { 
+    render() {
         if (this.props.service == 'Shower') {
             this.service = showered
         }
@@ -27,14 +29,16 @@ class ServiceCard extends Component {
         }
         return (
             <div className="card">
-                <img className='card__image' src={this.service} className='card__image'/>
+                <div className='card__container-image'>
+                    <img className='card__image' src={this.service} className='card__image' />
+                </div>
                 <h2 className="card__pet-name">{this.props.petName}</h2>
-                <h3 className="card__human-name">{this.props.humanName}</h3>
+                <h3 className="card__human-name">{this.props.humanName}'s pet</h3>
                 <p className="card__schedule-date">{this.props.scheduledDate}</p>
-                <Done onClick={this.deleteCard.bind(this)}/>
+                <FontAwesomeIcon icon={faCheck} className='card__done' color='#76d259' size='2x' onClick={this.deleteCard.bind(this)}/>
             </div>
         );
     }
 }
- 
+
 export default ServiceCard;

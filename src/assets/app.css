@@ -2,17 +2,24 @@
     --primary-color: #A45C40;
     --second-color: #F6EEE0;
     --accent-color: #E4B7A0;
+    --light-color: #F9F1F0;
 }
 
 .button {
     background: var(--primary-color);
-    border-radius: 10px;
+    border-radius: 30px;
     color: var(--second-color);
     height: 40px;
     border: none;
     cursor: pointer;
     transition: all .5s;
     width: 115px;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px 10px;
+    font-family: 'Pacifico', cursive;
+    font-size: 1.1rem;
+    line-height: 20px;
 }
 
 .button:hover {
@@ -26,9 +33,17 @@
     height: 40px;
     text-align: center;
     width: 100%;
+    font-family: 'Dancing Script', cursive;;
+    color: #A45C40;
+    font-size: 1.4rem;
+    min-width: 300px;
 }
 
 .input:focus {
     border: var(--primary-color) 2px solid;
     outline: none;
+}
+
+h2, h3, p {
+    margin: 0;
 }
