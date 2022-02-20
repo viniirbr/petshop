@@ -7,16 +7,44 @@ import SchedulePage from './pages/SchedulePage/SchedulePage';
 import ServicesPage from './pages/ServicesPage/ServicesPage';
 
 class App extends Component {
+  
+  constructor() {
+    super();
+    this.state = {
+      scheduledServices: []
+    }
+  }
+
+  addScheduledService(petName, humanName, service, scheduledDate) {
+    const newService = {petName, humanName, service, scheduledDate};
+    console.log(newService)
+    const newServicesArray = [...this.state.scheduledServices, newService];
+    const newState = {
+      scheduledServices: newServicesArray
+    }
+    this.setState(newState)
+  }
+
+  deleteCard(index) {
+    let scheduledServicesarray = this.state.scheduledServices
+    scheduledServicesarray.splice(index,1)
+    this.setState({
+      scheduledServices: scheduledServicesarray
+    })
+    console.log(this.state.scheduledServices)
+  }
+  
+  
   render() {
     return (
         <Router>
           <Header />
           <Switch>
             <Route exact path="/">
-              <SchedulePage />
+              <SchedulePage addScheduledServiceFunction = {this.addScheduledService.bind(this)}/>
             </Route>
             <Route exact path="/services">
-              <ServicesPage />
+              <ServicesPage servicesArray={this.state.scheduledServices} deleteCard={this.deleteCard.bind(this)}/>
             </Route>
           </Switch>
         </Router>

@@ -19,6 +19,7 @@
     background: var(--accent-color);
 }
 
+
 .input {
     border-radius: 10px;
     border: var(--primary-color) 2px dashed;
@@ -29,4 +30,5 @@
 
 .input:focus {
     border: var(--primary-color) 2px solid;
+    outline: none;
 }

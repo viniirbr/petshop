@@ -5,12 +5,6 @@ import { faPaw } from '@fortawesome/free-solid-svg-icons'
 import { Link } from 'react-router-dom'
 
 class Header extends Component {
-
-    // handleClick(event) {
-    //     window.location.href = '/ServiceList'
-    //     console.log('Oiiii')
-    // }
-
     render() {
         return (
             

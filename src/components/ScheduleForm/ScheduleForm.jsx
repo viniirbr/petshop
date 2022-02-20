@@ -9,7 +9,7 @@ class ScheduleForm extends Component {
         super();
         this.petName = "";
         this.humanName = "";
-        this.sevice = "Shower";
+        this.service = "Shower";
         this.scheduleDate = new moment().format("YYYY-MM-DD");
     }
 
@@ -42,25 +42,34 @@ class ScheduleForm extends Component {
         })
     }
 
-    alertClick(event) {
+    addService(event) {
         event.preventDefault()
-        const info = {
-            petName: this.petName,
-            humanName: this.humanName,
-            service: this.service,
-            shceduleDate: this.scheduleDate
-        }
-        console.log(info);
-        this.petName = "";
-        this.humanName = "";
-        this.service = "";
-        this.scheduleDate = new moment().format("YYYY-MM-DD");
-        this.setState(info)
+        this.props.addScheduledServiceFunction(this.petName, this.humanName, this.service, this.scheduleDate.toString())
+        // this.petName = "";
+        // this.humanName = "";
+        // this.sevice = "Shower";
+        // this.scheduleDate = new moment().format("YYYY-MM-DD");
     }
+
+    // alertClick(event) {
+    //     event.preventDefault()
+    //     const info = {
+    //         petName: this.petName,
+    //         humanName: this.humanName,
+    //         service: this.service,
+    //         shceduleDate: this.scheduleDate
+    //     }
+    //     console.log(info);
+    //     this.petName = "";
+    //     this.humanName = "";
+    //     this.service = "";
+    //     this.scheduleDate = new moment().format("YYYY-MM-DD");
+    //     this.setState(info)
+    // }
 
     render() {
         return (
-            <form className='schedule-form'>
+            <form className='schedule-form' onSubmit={this.addService.bind(this)}> 
                 <div className='schedule-form__container'>
                     <label className='schedule-form__label'>Pet name</label>
                     <input
@@ -95,7 +104,7 @@ class ScheduleForm extends Component {
                     <input type="date" value={this.scheduleDate} onChange={this.changeDate.bind(this)}/>
                 </div>
 
-                <button className='button' onClick={this.alertClick.bind(this)}>Confirm</button>
+                <button className='button' type='submit'>Confirm</button>
             </form>
         )
     }
