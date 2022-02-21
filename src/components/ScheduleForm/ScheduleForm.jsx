@@ -11,6 +11,12 @@ class ScheduleForm extends Component {
         this.humanName = "";
         this.service = "Shower";
         this.scheduleDate = new moment().format("YYYY-MM-DD");
+        this.state = {
+            petName: this.petName,
+            humanName: this.humanName,
+            sevice: this.sevice,
+            scheduleDate: this.scheduleDate
+        }
     }
 
     changePetName(event) {
@@ -45,27 +51,12 @@ class ScheduleForm extends Component {
     addService(event) {
         event.preventDefault()
         this.props.addScheduledServiceFunction(this.petName, this.humanName, this.service, this.scheduleDate.toString())
-        // this.petName = "";
-        // this.humanName = "";
-        // this.sevice = "Shower";
-        // this.scheduleDate = new moment().format("YYYY-MM-DD");
+        this.petName = "";
+        this.humanName = "";
+        this.sevice = "Shower";
+        this.scheduleDate = new moment().format("YYYY-MM-DD");
+        
     }
-
-    // alertClick(event) {
-    //     event.preventDefault()
-    //     const info = {
-    //         petName: this.petName,
-    //         humanName: this.humanName,
-    //         service: this.service,
-    //         shceduleDate: this.scheduleDate
-    //     }
-    //     console.log(info);
-    //     this.petName = "";
-    //     this.humanName = "";
-    //     this.service = "";
-    //     this.scheduleDate = new moment().format("YYYY-MM-DD");
-    //     this.setState(info)
-    // }
 
     render() {
         return (
@@ -90,18 +81,18 @@ class ScheduleForm extends Component {
                         onChange={this.changeHumanName.bind(this)} />
                 </div>
                 <section className='service-date'>
-                    <div className='schedule-form__container'>
+                    <div className='schedule-form__container schedule-form__container--service'>
                         <label className='schedule-form__label'>Select service</label>
-                        <select className='input' value={this.service} onChange={this.changeService.bind(this)}>
+                        <select className='input schedule-form__service-input' value={this.service} onChange={this.changeService.bind(this)}>
                             <option value="Shower">Shower</option>
                             <option value="Groom">Groom</option>
                             <option value="Shower+Groom">Shower+Groom</option>
                         </select>
                     </div>
 
-                    <div className='schedule-form__container'>
+                    <div className='schedule-form__container schedule-form__container--date'>
                         <label className='schedule-form__label'>Choose a date</label>
-                        <input className='input' type="date" value={this.scheduleDate} onChange={this.changeDate.bind(this)} />
+                        <input className='input schedule-form__date-input' type="date" min={new moment().format("YYYY/MM/DD")} value={this.scheduleDate} onChange={this.changeDate.bind(this)} />
                     </div>
                 </section>
 

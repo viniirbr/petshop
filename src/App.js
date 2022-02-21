@@ -38,7 +38,7 @@ class App extends Component {
   
   render() {
     return (
-        <Router>
+        <Router basename='/petshop'>
           <Header servicesCount={this.state.scheduledServices.length}/>
           <Switch>
             <Route exact path="/">

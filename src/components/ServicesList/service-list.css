@@ -5,3 +5,7 @@
     margin: 40px 20px;
     justify-content: space-around;
 }
+
+.service-list__message {
+    font-family: 'Pacifico', cursive;
+}

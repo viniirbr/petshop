@@ -14,10 +14,12 @@ class Header extends Component {
                 <nav className='header__nav'>
                     <ul className='header__items'>
                         <div className='header__services'>
+                            {this.props.servicesCount>0 ? // conditional for exhibit counter
                             <div className='header__count'>{this.props.servicesCount}</div>
-                            <Link to="/services" className='header__nav-item'><li>Services</li></Link>
+                            :console.log('é 0')}
+                            <Link to="./services" className='header__nav-item'><li>Services</li></Link>
                         </div>
-                        <Link to="/" className='button'>Schedule Service</Link>
+                        <Link to="./" className='button'>Schedule Service</Link>
                     </ul>
                 </nav>
             </header>

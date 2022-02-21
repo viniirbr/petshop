@@ -20,6 +20,15 @@
     color: var(--primary-color);
     font-family: 'Pacifico', 'cursive';
     line-height: 30px;
+    text-align: center;
+}
+
+.schedule-form__container--service {
+    width: 35%;
+}
+
+.schedule-form__container--date {
+    width: 35%;
 }
 
 .service-date {
