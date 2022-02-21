@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/petshop/static/css/main.886b4868.css",
-    "main.js": "/petshop/static/js/main.04afaaf2.js",
-    "static/js/787.0df66005.chunk.js": "/petshop/static/js/787.0df66005.chunk.js",
-    "static/media/saddog.png": "/petshop/static/media/saddog.a3e632224de30c83f768.png",
-    "static/media/groomed.png": "/petshop/static/media/groomed.f1558846d157fba2b91a.png",
-    "static/media/showered.png": "/petshop/static/media/showered.f4b4a05afd8ae2d52972.png",
-    "static/media/showered+groomed.png": "/petshop/static/media/showered+groomed.5a35f6bb5667ddbd70fb.png",
-    "index.html": "/petshop/index.html",
-    "static/media/done.svg": "/petshop/static/media/done.9fc800a2428ebd495c3c6d2f24fad8ab.svg",
-    "main.886b4868.css.map": "/petshop/static/css/main.886b4868.css.map",
-    "main.04afaaf2.js.map": "/petshop/static/js/main.04afaaf2.js.map",
-    "787.0df66005.chunk.js.map": "/petshop/static/js/787.0df66005.chunk.js.map"
+    "main.css": "/petshop/schedule/static/css/main.886b4868.css",
+    "main.js": "/petshop/schedule/static/js/main.9b21f3c0.js",
+    "static/js/787.0df66005.chunk.js": "/petshop/schedule/static/js/787.0df66005.chunk.js",
+    "static/media/saddog.png": "/petshop/schedule/static/media/saddog.a3e632224de30c83f768.png",
+    "static/media/groomed.png": "/petshop/schedule/static/media/groomed.f1558846d157fba2b91a.png",
+    "static/media/showered.png": "/petshop/schedule/static/media/showered.f4b4a05afd8ae2d52972.png",
+    "static/media/showered+groomed.png": "/petshop/schedule/static/media/showered+groomed.5a35f6bb5667ddbd70fb.png",
+    "index.html": "/petshop/schedule/index.html",
+    "static/media/done.svg": "/petshop/schedule/static/media/done.9fc800a2428ebd495c3c6d2f24fad8ab.svg",
+    "main.886b4868.css.map": "/petshop/schedule/static/css/main.886b4868.css.map",
+    "main.9b21f3c0.js.map": "/petshop/schedule/static/js/main.9b21f3c0.js.map",
+    "787.0df66005.chunk.js.map": "/petshop/schedule/static/js/787.0df66005.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.886b4868.css",
-    "static/js/main.04afaaf2.js"
+    "static/js/main.9b21f3c0.js"
   ]
 }
