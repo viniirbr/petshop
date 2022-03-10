@@ -1,5 +1,7 @@
 # React Petshop
+<p align='center'>
 <img src="https://user-images.githubusercontent.com/35473934/154956275-83d26c2c-0ec9-4408-b99c-3d2a8ee59a13.png" alt="drawing" width="500"/><img src="https://user-images.githubusercontent.com/35473934/154956305-e4d9dfba-e7dc-4d13-8039-7257c72dece9.png" alt="drawing" width="500"/>
+</p>
 
 
 ## The Project
